@@ -1,0 +1,9 @@
+name: federated-systems
+
+services:
+  weather-api:
+    build:
+      dockerfile: Dockerfile
+      context: backends/weather-api
+    ports:
+      - 8080:8080
