@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="favicon.svg">
   <title>Static Page</title>
+  <link rel="stylesheet" href="loader.css">
   <link rel="stylesheet" href="styles.css">
   <script type="module" src="main.js"></script>
 </head>
@@ -24,10 +25,22 @@
 
   <div class="main-container">
     <aside>
-      <div id="widget-weather">
-        <p>Weather</p>
-        <p data-widget-weather="description"></p>
-        <p data-widget-weather="temperature"></p>
+      <div data-loading="true" id="widget-weather">
+        <div class="lds-roller">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="content">
+          <p>Weather</p>
+          <p data-widget-weather="summary">Summary: <span></span></p>
+          <p data-widget-weather="temperature">Temperature: <span></span></p>
+        </div>
       </div>
     </aside>
     <main>

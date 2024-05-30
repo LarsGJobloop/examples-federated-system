@@ -43,7 +43,9 @@ header>nav>ul {
   display: flex;
 }
 
-aside {}
+aside {
+  padding: 0.2em 0.4em;
+}
 
 main {
   flex-grow: 1;
@@ -54,4 +56,36 @@ footer {
   text-align: center;
   padding: 1em 1em;
   background-color: var(--color-primary);
+}
+
+#widget-weather {
+  width: 8em;
+  height: 8em;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  grid-template-rows: 1fr auto 1fr;
+
+  background-color: var(--color-secondary);
+  border-radius: 8px;
+}
+
+#widget-weather>* {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+
+#widget-weather[data-loading="true"]>.lds-roller {
+  display: inline-block;
+}
+
+#widget-weather[data-loading="true"]>.content {
+  display: none;
+}
+
+#widget-weather[data-loading="false"]>.lds-roller {
+  display: none;
+}
+
+#widget-weather[data-loading="false"]>.content {
+  display: block;
 }
