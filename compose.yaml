@@ -1,6 +1,13 @@
 name: federated-systems
 
 services:
+  static-page:
+    build:
+      dockerfile: Dockerfile
+      context: clients/static-page
+    ports:
+      - 9090:80
+
   weather-api:
     build:
       dockerfile: Dockerfile

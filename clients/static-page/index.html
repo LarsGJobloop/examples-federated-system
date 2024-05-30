@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="favicon.svg">
+  <title>Static Page</title>
+  <link rel="stylesheet" href="styles.css">
+  <script type="module" src="main.js"></script>
+</head>
+
+<body>
+  <header>
+    <img src="favicon.svg" alt="logo" width="30px" height="30px">
+
+    <nav>
+      <ul>
+        <li><a href="#hero">Top</a></li>
+        <li><a href="#hero">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="main-container">
+    <aside>
+      <div id="widget-weather">
+        <p>Weather</p>
+        <p data-widget-weather="description"></p>
+        <p data-widget-weather="temperature"></p>
+      </div>
+    </aside>
+    <main>
+      <section id="hero">
+        <h1>Static Page Example</h1>
+      </section>
+      <section id="about">
+
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    <a href="https://jobloop.no">Jobloop</a>
+  </footer>
+</body>
+
+</html>
