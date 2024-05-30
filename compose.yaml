@@ -1,13 +1,24 @@
 name: federated-systems
 
 services:
+  # Clients
   static-page:
     build:
       dockerfile: Dockerfile
       context: clients/static-page
     ports:
       - 9090:80
+      
+  next-app:
+    build:
+      dockerfile: Dockerfile
+      context: clients/next-app
+    environment:
+      NEXT_PUBLIC_WEATHER_API_ADDRESS: http://localhost:8080
+    ports:
+      - 19090:3000
 
+  # Backends
   weather-api:
     build:
       dockerfile: Dockerfile
