@@ -1,6 +1,6 @@
 const WEATHER_API_ADDRESS = {
   dev: "http://localhost:8080",
-  prod: "https://lgas-jobloop-federated-api.azurewebsites.net",
+  prod: "https://lgas-federated-systems-weather-api.azurewebsites.net",
 }
 const ENDPOINT = "/api/v1/reports"
 
