@@ -23,9 +23,9 @@ builder.Services.AddCors(options =>
 var app = builder.Build();
 
 // Setup Routes
+app.UseCors();
 app.UseHttpsRedirection();
 app.MapControllers();
-app.UseCors();
 
 // Start application
 app.Run();
