@@ -7,6 +7,8 @@ on:
   push:
     branches:
       - main
+    paths:
+      - "backends/weather-api/**"
   workflow_dispatch:
 
 env:
