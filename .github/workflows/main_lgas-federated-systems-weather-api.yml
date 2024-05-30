@@ -9,6 +9,9 @@ on:
       - main
   workflow_dispatch:
 
+env:
+  WEBAPP_PACKAGE_PATH: "./backends/weather-api"
+
 jobs:
   build:
     runs-on: windows-latest
