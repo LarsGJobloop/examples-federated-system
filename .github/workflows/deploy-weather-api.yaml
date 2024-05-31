@@ -69,3 +69,7 @@ jobs:
           app-name: "lgas-federated-systems-weather-api"
           slot-name: "Production"
           package: .
+
+      - name: logout
+        run: |
+          az logout
